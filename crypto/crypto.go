@@ -168,6 +168,7 @@ func EncryptFile(priv *rsa.PrivateKey, label string, testMode bool) {
 
 }
 
+// this is used to generate Private key in for one time session, for the secret
 func generatePrivateKey(bitSize int) (*rsa.PrivateKey, error) {
 	// Private Key generation
 	privateKey, err := rsa.GenerateKey(rand.Reader, bitSize)
